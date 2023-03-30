@@ -2,6 +2,12 @@ cabal-version: 3.0
 
 name: bits-show
 version: 0.0.0.0
+synopsis: Showing data as strings of 0 and 1
+category: Bit, Text
+
+description:
+    The @showFiniteBits@ function, for a type belonging to
+    the @FiniteBits@ class, displays the bits as a string.
 
 license: Apache-2.0
 license-file: license.txt
