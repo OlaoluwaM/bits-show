@@ -5,6 +5,13 @@ import GHC.Exts
 
 class FixedWidthIntegral
 
+{- |
+Examples:
+
+@showFiniteBits (5 :: Int8) = "00000101"@
+
+@showFiniteBits ((-5) :: Int8) = "11111011"@
+-}
 showFiniteBits :: (FiniteBits bits, IsString string) => bits -> string
 showFiniteBits x =
   fromString
@@ -19,6 +26,7 @@ showFiniteBits x =
         )
     )
 
+{- | @{ True -> '1'; False -> '0' }@ -}
 showBit :: Bool -> Char
 showBit x = case x of
     True -> '1'
