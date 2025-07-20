@@ -1,7 +1,7 @@
 module Bits.Show where
 
 import Data.Bits
-import GHC.Exts
+import Data.String
 
 class FixedWidthIntegral
 
@@ -28,6 +28,4 @@ showFiniteBits x =
 
 {- | @{ True -> '1'; False -> '0' }@ -}
 showBit :: Bool -> Char
-showBit x = case x of
-    True -> '1'
-    False -> '0'
+showBit x = if x then '1' else '0'
